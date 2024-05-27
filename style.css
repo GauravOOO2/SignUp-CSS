@@ -26,15 +26,22 @@ html{
     border-radius: 2rem;
     box-shadow: 1px 1px 40px 1px #797979;
     position: relative;
+    overflow: hidden;
 }
 
 .green_bg{
-    width: 40%;
+    width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     background-color: rgb(110, 243, 110);
     border-radius: .5rem;
+    z-index: 10;
+    transition: width 1s;
+}
+
+.container.change .green_bg{
+    width: 40%;
 
 }
 
@@ -49,7 +56,7 @@ html{
     padding: 1.5rem 5rem 1.5rem 5rem ;
     border-radius: 4rem;
     font-size: 1.5rem;
-
+    cursor: pointer;
 }
 
 .banner{
@@ -57,16 +64,20 @@ html{
     height: 30%;
     position: absolute;
     top: 20%;
-    left: 8%;
+    left: -35%;
     transform: translate(-20%, -8% );
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 15;
+    transition: left 1s;
 
-    z-index: 10;
+}
 
+.container.change .banner{
+    left: 8% ;
 }
 
 .banner h1{
@@ -82,4 +93,78 @@ html{
     letter-spacing: 2px;
     font-size: 2rem;
     text-align: center;
+}
+
+
+.signup_form{
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    transition: left 1s;
+    text-align: center;
+}
+
+.container.change .signup_form{
+    left: 70%;
+}
+
+.signup_form h1{
+    color: rgb(110, 243, 110); 
+    /* padding-bottom: 5rem; */
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+
+}
+
+.social_media i {
+    border: 1px solid #868686;   
+    width: 15%;
+    height: 10%;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 100%;
+    color: #656565; 
+}
+
+.signup_form p{
+    color: #868686;
+    font-size: 2rem;
+    margin: 2.5rem;
+}
+
+.input_group{
+    position: relative;
+}
+
+.input_group i{
+    position: absolute;
+    top: 50%;
+    left: 2.5rem;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #5a5a5a;
+}
+
+.input_group input{
+    padding: 1.6rem 1rem 2rem 4rem;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(237, 237, 237);
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+.signup_form button{
+    background-color: rgb(110, 243, 110) ;
+    border:1px solid #fff;
+    color: #fff;
+    padding: 1.5rem 5rem 1.5rem 5rem ;
+    border-radius: 4rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 2.5rem;
 }
