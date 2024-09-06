@@ -3,4 +3,4 @@
 
 # Motive: 
 
-to create a simple signin page and impliment CSS transition-property 
+to create a simple sign in page and implement CSS transition-property 
